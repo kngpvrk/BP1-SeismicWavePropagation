@@ -19,7 +19,7 @@
 
 ## 📝 Introduction and Background 
 
-This code simulates two-dimensional seismic wave propagation in an elastic medium by employing numerical modeling to analyze wave behavior in a geophysical setting. 
+This code simulates two-dimensional seismic wave propagation in an elastic homogeneous medium by employing numerical modeling to analyze wave behavior in a geophysical setting. 
 Furthermore, it computes displacement time series at the surface and constructs synthetic seismograms for stations located at varying distances from the source. 
 Additionally, it identifies the peaks of P- and S-wave arrivals and calculates their velocities based on the seismograms, comparing them with theoretical values.
 
@@ -27,6 +27,18 @@ Additionally, it identifies the peaks of P- and S-wave arrivals and calculates t
 
 The programming language *Julia* and the *Visual Studio Code editor* were utilized for this purpose. For the visualization, the Julia package *Plots* and *Pyplot*
 were used to create graphical plots of the simulation results, while the *Measure* package allowed the customization of the plot layouts.
+
+### Core Equations
+
+The theoretical velocities of P- and S-waves are calculated using the following equation. Here, *K* is the bulk modulus, *G* the shear modulus and *ρ* the density of the medium.
+
+$$
+v_p = \sqrt{\frac{K + \frac{4}{3}G}{\rho}}
+$$
+
+$$
+v_s = \sqrt{\frac{G}{\rho}}
+$$
 
 ### Finite Element Method 
 
@@ -38,10 +50,27 @@ parts, allowing continuous physical equations to be solved numerically.
 In this project, the *Neuman Boundary Conditions* were applied to define the behavior at the edges of the local domain. These conditions ensure 
 zero particle velocity across the edges and as a result confine the wavefield within the domain.
 
+
+$$
+\frac{\partial v_x}{\partial y} = 0
+$$
+
+$$
+\frac{\partial v_y}{\partial x} = 0
+$$
+
 ### Initialization of Wave Propagation
 
-The *Gaussian function* was employed to represent a localized disturbance in terms of pressure P and stress τ. This function simulates a disturbance with energy 
+The *Gaussian function* was employed to represent a localized disturbance in terms of pressure (P) and stress (τ). This function simulates a disturbance with an energy 
 source that is both localized and smoothly distributed.
+
+$$
+f(x, y) = a \cdot \exp\left(-\frac{(x - x_0)^2 + (y - y_0)^2}{2\sigma^2}\right)
+$$
+
+
+Here, *a* is the amplitude of the disturbance, *x0* and *y0* the center of the disturbance, and *σ* the spatial distribution of the disturbance.
+
 
 ### Time Integration
 
@@ -49,11 +78,19 @@ The 'Courant-Friedrichs-Lewy (CFL)' condition is used, which is a stability crit
 appropriate ratio of the time step to the spatial resolution, it prevents the numerical solution from becoming unstable as it exceeds the relation of order 
 of system’s maximum wave speed.
 
+$$
+\Delta t \leq \frac{\Delta x}{v_p \cdot C}
+$$
+
+Here, 
+
 ### Synthetic Seismograms
 
-The finite-difference method was employed to update the wave equation velocities and stresses at each time step. Hereby, the values are computed for each grid
-cell as time progresses and the average horizontal velocity is extracted from the grid cell, closest to the station. Instantaneous displacements were computed,
-by multiplying the velocity by the time step.
+The finite-difference method was employed to update the wave equation velocities and stresses at each time step. At each iteration, values were calculated for every grid cell as time progressed. The average horizontal velocity was then extracted from the grid cell closest to the station. Instantaneous displacements were computed by multiplying the velocity by the time step.
+
+$$
+u_x = v_x \cdot \Delta t
+$$
 
 ## 🔶 Limitations 
 
@@ -71,7 +108,7 @@ While this simulation successfully demonstrates the propagation of elastic seism
  To run the code, ensure following tools are installed:
 
 - **Julia**: Version 1.11 or higher ([Click here to Download Julia](https://julialang.org/downloads/))
-- **Code Editor**: Recommended: Visual Studio Code ([Download VSCode](https://code.visualstudio.com/))
+- **Code Editor**: Visual Studio Code (recommended) ([Download VSCode](https://code.visualstudio.com/))
 - **Git**: Required for cloning the repository ([Click here to Download Git](https://git-scm.com/))
 - **Code Editor**: For example Visual Studio Code ([Download VSCode](https://code.visualstudio.com/))
 
