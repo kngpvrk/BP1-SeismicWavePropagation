@@ -55,5 +55,26 @@ While this simulation successfully demonstrates the propagation of elastic seism
  Despite these limitations, the simulation offers a valuable framework for understanding seismic wave behavior under idealized conditions. 
 
  ## How to Use 📌
+ ### General Requirements
+ To run the code, ensure the systems meets the following system requirements:
+
+
+## Prerequisites / Setup Requirements
+
+To run this simulation, ensure the following tools are installed:
+
+- **Julia**: Version 1.11 or higher ([Click here to Download Julia](https://julialang.org/downloads/))
+- **Code Editor**: Recommended: Visual Studio Code ([Download VSCode](https://code.visualstudio.com/))
+- **Git**: Required for cloning the repository ([Click here to Download Git](https://git-scm.com/))
+- **Code Editor**: For example Visual Studio Code ([Download VSCode](https://code.visualstudio.com/))
+
+Install the following Julia Packages in Julia REPL:
+
+   ```julia
+   using Pkg
+   Pkg.add(["Plots", "PyPlot", "Measures"])
+
+
+
 
 
