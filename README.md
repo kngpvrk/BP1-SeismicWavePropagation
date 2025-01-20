@@ -54,27 +54,52 @@ While this simulation successfully demonstrates the propagation of elastic seism
 
  Despite these limitations, the simulation offers a valuable framework for understanding seismic wave behavior under idealized conditions. 
 
- ## How to Use 📌
+ ## Getting Started 📌
  ### General Requirements
- To run the code, ensure the systems meets the following system requirements:
-
-
-## Prerequisites / Setup Requirements
-
-To run this simulation, ensure the following tools are installed:
+ To run the code, ensure following tools are installed:
 
 - **Julia**: Version 1.11 or higher ([Click here to Download Julia](https://julialang.org/downloads/))
 - **Code Editor**: Recommended: Visual Studio Code ([Download VSCode](https://code.visualstudio.com/))
 - **Git**: Required for cloning the repository ([Click here to Download Git](https://git-scm.com/))
 - **Code Editor**: For example Visual Studio Code ([Download VSCode](https://code.visualstudio.com/))
 
-Install the following Julia Packages in Julia REPL:
-
-   ```julia
-   using Pkg
-   Pkg.add(["Plots", "PyPlot", "Measures"])
+Run the the following lines in Julia REPL to install the necessary packages:
 
 
+### Setting up the Project and Running the Code
+
+To start setting up the project, create a new directory where you want to store the project. Then open your terimanl and execute the following command:
 
 
+Then initialize the project by cloning the repository:
+
+The last step is to execute the code by running the following in the Julia REPL: 
+
+
+
+## 📚 References
+
+- Modulhandbuch Geowissenschaften, 2021. Zugriff am 17. Januar 2025.
+- C. Chapman. Seismic Wave Propagation in Elastic Media. Cambridge University Press,
+ Cambridge, 1 edition, 2004. Online publication date: January 2010.
+- J. Achenbach. Wave propagation in elastic solids. Elsevier, 2012.
+- P. Bormann, B. Engdahl, and R. Kind. Seismic wave propagation and earth models. In New
+ manual of seismological observatory practice 2, pages 1–105. Deutsches GeoForschungsZen
+trum GFZ, 2012.
+- J. Bezanson, A. Edelman, S. Karpinski, and V. Shah. The julia programming language,
+ 2012. Version 1.11, accessed January 10, 2025.
+- Microsoft Corporation. Visual studio code, 2015. Version 1.96, accessed January 10, 2025.
+- J. Semblat and J. Brioist. Efficiency of higher order finite elements for the analysis of seismic
+ wave propagation. Journal of Sound and Vibration, 231(2), 2000.
+- F. Broggini, M. Vasmel, and D. Robertsson, J.and van Manen. Immersive boundary condi
+tions: Theory, implementation, and examples. Geophysics, 82(3):T97–T110, 2017.
+- J. Dickinson, S. James, S. Mehl, M. Hill, S. Leake, G. Zyvoloski, C. Faunt, and A. Ed
+debbarh. A new ghost-node method for linking different models and initial investigations
+ of heterogeneity and nonmatching grids. Advances in Water Resources, 30(8):1722–1736,
+ 2007.
+- A. Baratta and I. Corbi. Epicentral distribution of seismic sources over the territory. Ad
+vances in Engineering Software, 35(10-11):663–667, 2004.
+- S. Evje and T. Fl˚atten. Cfl-violating numerical schemes for a two-fluid model. Journal of
+ Scientific Computing, 29:83–114, 2006.
+- Ankit Rohatgi. Webplotdigitizer, 2023. Accessed: January 17, 2025.
 
