@@ -121,15 +121,26 @@ While this simulation successfully demonstrates the propagation of elastic seism
 
 Run the the following lines in Julia REPL to install the necessary packages:
 
+```
+using Pkg
+Pkg.add(["Plots", "PyPlot", "Measures"])
+```
+
 
 ### Setting up the Project and Running the Code
 
-To start setting up the project, create a new directory where you want to store the project. Then open your terminal and execute the following command:
+To start setting up the project, create a new directory where you want to store the project and initialize the project by cloning the repository. Then open your terminal and execute the following command:
 
-
-Then initialize the project by cloning the repository:
+```
+git clone https://github.com/kngpvrk/BP1-SeismicWavePropagation.git
+BP1-SeismicWavePropagation
+```
 
 The last step is to execute the code by running the following in the Julia REPL: 
+
+```
+include("BWp1_Trapp_code.jl")
+```
 
 
 The simulation uses default parameters, which can be modified directly in the script:
