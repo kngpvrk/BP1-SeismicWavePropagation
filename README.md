@@ -41,7 +41,7 @@ v_s = \sqrt{\frac{G}{\rho}}
 $$
 
 
-In a two dimensional continuum, addressing changes in the x and y directions, the force balance are given as:
+In a two dimensional continuum, addressing changes in the x and y directions, the force balance is given as:
 
 $$
 \begin{aligned}
