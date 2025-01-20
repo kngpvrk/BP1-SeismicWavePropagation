@@ -102,7 +102,7 @@ $$
 
 ### Synthetic Seismograms
 
-The finite-difference method was employed to update the wave equation velocities and stresses at each time step. At each iteration, values were calculated for every grid cell as time progressed. The average horizontal velocity was then extracted from the grid cell closest to the station. Instantaneous displacements were computed by multiplying the velocity by the time step.
+The finite-difference method was employed to update the wave equation velocities and stresses at each time step. At each iteration, values were calculated for every grid cell as time progressed. The average horizontal velocity was then extracted from the grid cell closest to the station. Instantaneous displacements were computed by multiplying the velocity by the time step and then stored in arrays, which are used to produce the synthetic seismogram.
 
 $$
 u_x = v_x \cdot \Delta t
