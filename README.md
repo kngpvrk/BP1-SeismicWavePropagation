@@ -40,6 +40,19 @@ $$
 v_s = \sqrt{\frac{G}{\rho}}
 $$
 
+
+In a two dimensional continuum, addressing changes in the x and y directions, the force balance are given as:
+
+$$
+\begin{aligned}
+\rho \frac{\partial v_x}{\partial t} &= \frac{\partial \tau_{xx}}{\partial x} + \frac{\partial \tau_{xy}}{\partial y} - \frac{\partial P}{\partial x}, \\
+\rho \frac{\partial v_y}{\partial t} &= \frac{\partial \tau_{yy}}{\partial y} + \frac{\partial \tau_{xy}}{\partial x} - \frac{\partial P}{\partial y}
+\end{aligned}
+$$
+
+This equation describes the state of a medium under the influence of external forces and stresses
+
+
 ### Finite Element Method 
 
 The *finite element method* (FEM) was uitilized for the modeling of seismic wave propagation, which allowed the division of the system into discrete
@@ -48,7 +61,7 @@ parts, allowing continuous physical equations to be solved numerically.
 ### Boundary Conditions
 
 In this project, the *Neuman Boundary Conditions* were applied to define the behavior at the edges of the local domain. These conditions ensure 
-zero particle velocity across the edges and as a result confine the wavefield within the domain.
+zero particle velocity across the edges and as a result confine the wavefield within the domain. The Neumann boundary conditions were applied as follows:
 
 
 $$
@@ -59,6 +72,7 @@ $$
 \frac{\partial v_y}{\partial x} = 0
 $$
 
+
 ### Initialization of Wave Propagation
 
 The *Gaussian function* was employed to represent a localized disturbance in terms of pressure (P) and stress (τ). This function simulates a disturbance with an energy 
@@ -67,9 +81,6 @@ source that is both localized and smoothly distributed.
 $$
 f(x, y) = a \cdot \exp\left(-\frac{(x - x_0)^2 + (y - y_0)^2}{2\sigma^2}\right)
 $$
-
-
-Here, *a* is the amplitude of the disturbance, *x0* and *y0* the center of the disturbance, and *σ* the spatial distribution of the disturbance.
 
 
 ### Time Integration
@@ -82,7 +93,6 @@ $$
 \Delta t \leq \frac{\Delta x}{v_p \cdot C}
 $$
 
-Here, 
 
 ### Synthetic Seismograms
 
