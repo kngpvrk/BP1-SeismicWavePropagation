@@ -85,7 +85,15 @@ The simulation uses default parameters, which can be modified directly in the sc
 - Distance of surface stations from source (xst1, yst1 = 20e3, 0.0 | xst2, yst2 = 40e3, 0.0)
 
 
+## 🔍 Results
 
+The simulation generates:
+- Visualiazation of Wave Propagation: A heatmap illustrates the velocity magnitdue over time across the domain. 
+  --> Images are saved every 100th time step in a PNG format
+- Synthetic Seismograms: Records the displacement time series at the surface stations.
+- Theoretical velocities of the P- and S-waves.
+- Measured velocities of the P- and S-waves: Determines the measured velocities from the seismogram.
+- Arrival Times of the P- and S-waves: Extracts the arrival times from the seismogram. 
 
 ## 📚 References
 
