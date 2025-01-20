@@ -5,7 +5,7 @@
 </div>
 
 
-## Introduction and Background 📌
+## 📝 Introduction and Background 
 
 This code simulates two-dimensional seismic wave propagation in an elastic medium by employing numerical modeling to analyze wave behavior in a geophysical setting. 
 Furthermore, it computes displacement time series at the surface and constructs synthetic seismograms for stations located at varying distances from the source. 
@@ -43,7 +43,7 @@ The finite-difference method was employed to update the wave equation velocities
 cell as time progresses and the average horizontal velocity is extracted from the grid cell, closest to the station. Instantaneous displacements were computed,
 by multiplying the velocity by the time step.
 
-## Limitations 📌
+## 🔶 Limitations 
 
 While this simulation successfully demonstrates the propagation of elastic seismic waves in a simplified, homogeneous domain, it has many limitations:
 
@@ -54,7 +54,7 @@ While this simulation successfully demonstrates the propagation of elastic seism
 
  Despite these limitations, the simulation offers a valuable framework for understanding seismic wave behavior under idealized conditions. 
 
- ## Getting Started 📌
+ ## 🔨 Getting Started 
  ### General Requirements
  To run the code, ensure following tools are installed:
 
@@ -76,6 +76,16 @@ Then initialize the project by cloning the repository:
 The last step is to execute the code by running the following in the Julia REPL: 
 
 
+The simulation uses default parameters, which can be modified directly in the script:
+- Domain size (xmin, xmax = 0, 80e3 | ymin, ymax = -30e3, 8)
+- Grid resolution (ncx, ncy = 400, 250)
+- Bulk modulus (K = 5e10 Pa)
+- Shear modulus (G = 3e10 Pa)
+- Density (ρ = 2700 kg/m³)
+- Distance of surface stations from source (xst1, yst1 = 20e3, 0.0 | xst2, yst2 = 40e3, 0.0)
+
+
+
 
 ## 📚 References
 
@@ -86,8 +96,7 @@ The last step is to execute the code by running the following in the Julia REPL:
 - P. Bormann, B. Engdahl, and R. Kind. Seismic wave propagation and earth models. In New
  manual of seismological observatory practice 2, pages 1–105. Deutsches GeoForschungsZen
 trum GFZ, 2012.
-- J. Bezanson, A. Edelman, S. Karpinski, and V. Shah. The julia programming language,
- 2012. Version 1.11, accessed January 10, 2025.
+- J. Bezanson, A. Edelman, S. Karpinski, and V. Shah. The julia programming language, 2012. Version 1.11, accessed January 10, 2025.
 - Microsoft Corporation. Visual studio code, 2015. Version 1.96, accessed January 10, 2025.
 - J. Semblat and J. Brioist. Efficiency of higher order finite elements for the analysis of seismic
  wave propagation. Journal of Sound and Vibration, 231(2), 2000.
@@ -95,8 +104,7 @@ trum GFZ, 2012.
 tions: Theory, implementation, and examples. Geophysics, 82(3):T97–T110, 2017.
 - J. Dickinson, S. James, S. Mehl, M. Hill, S. Leake, G. Zyvoloski, C. Faunt, and A. Ed
 debbarh. A new ghost-node method for linking different models and initial investigations
- of heterogeneity and nonmatching grids. Advances in Water Resources, 30(8):1722–1736,
- 2007.
+ of heterogeneity and nonmatching grids. Advances in Water Resources, 30(8):1722–1736, 2007.
 - A. Baratta and I. Corbi. Epicentral distribution of seismic sources over the territory. Ad
 vances in Engineering Software, 35(10-11):663–667, 2004.
 - S. Evje and T. Fl˚atten. Cfl-violating numerical schemes for a two-fluid model. Journal of
