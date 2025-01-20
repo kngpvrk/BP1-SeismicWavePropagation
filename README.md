@@ -41,6 +41,12 @@ v_s = \sqrt{\frac{G}{\rho}}
 $$
 
 
+$$
+\tau_{ij} = 2G \cdot \dot{\epsilon}_{ij}
+$$
+
+
+
 In a two dimensional continuum, addressing changes in the x and y directions, the force balance is given as:
 
 $$
@@ -102,6 +108,8 @@ $$
 u_x = v_x \cdot \Delta t
 $$
 
+
+The seismogram displacement array is scanned to identify when the displacement exceeds a defined limit. That moment is labeled as the corresponding wave’s arrival time. Since P-waves travel faster, they exceed the limit earlier than S–waves. Therefore, the P– and S–waves must be identified separately. Ideally, the first peak in the seismogram corresponds to the P-wave, while the second peak represents the S–wave. Based on the distance from the source to each station and the arrival times of the P– and S–waves, the wave velocities at each station can be computed. 
 ## 🔶 Limitations 
 
 While this simulation successfully demonstrates the propagation of elastic seismic waves in a simplified, homogeneous domain, it has many limitations:
@@ -147,12 +155,12 @@ The simulation uses default parameters, which can be modified directly in the sc
 ## 🔍 Results
 
 The simulation generates:
-- Visualiazation of Wave Propagation: A heatmap illustrates the velocity magnitdue over time across the domain. 
-  --> Images are saved every 100th time step in a PNG format.
+- Visualiazation of Wave Propagation: A heatmap illustrates the velocity magnitdue over time across the domain. The images are saved every 100th time step in a PNG format.
 - Synthetic Seismograms: Records the displacement time series at the surface stations.
 - Theoretical velocities of the P- and S-waves.
+- Arrival Times of the P- and S-waves: Extracts the arrival times from the seismogram.
 - Measured velocities of the P- and S-waves: Determines the measured velocities from the seismogram.
-- Arrival Times of the P- and S-waves: Extracts the arrival times from the seismogram. 
+
 
 The following outputs can be gained using the default parameters:
 
@@ -173,6 +181,8 @@ This image illustrates the wave propagation and synthetic seismogram, inlcuding 
 
 ### Occuring Discrepancies
 The simulation revealed discrepancies between the theoretical and measured velocities, particularly for the S-waves. These discrepancies primarily arise due to the limiting factors mentioned above. Additionally, the oscillation observed in the seismogram is a result of using instantaneous displacement.
+
+To validate the measured values, a visual analysis of the synthetic seismogram is recommended, as it can provide a more accurate representation of wave velocities and arrival times.
 
 
 ## 📚 References
