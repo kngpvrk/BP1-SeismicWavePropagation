@@ -1,5 +1,10 @@
 # Simulation of Seismic Wave Propagation in 2D Elastic Media
 
+<div align="center">
+  <img src="timestep_2400.png" alt="Example Wave Propagation" width="500">
+</div>
+
+
 ## Introduction and Background 📌
 
 This code simulates two-dimensional seismic wave propagation in an elastic medium by employing numerical modeling to analyze wave behavior in a geophysical setting. 
@@ -42,10 +47,10 @@ by multiplying the velocity by the time step.
 
 While this simulation successfully demonstrates the propagation of elastic seismic waves in a simplified, homogeneous domain, it has many limitations:
 
-- <u>Numerical Artifacts</u> such as distorted wave velocities and arrival times are introduced by numerical dispersion, coarse grid resolution,
+- Numerical Artifacts such as distorted wave velocities and arrival times are introduced by numerical dispersion, coarse grid resolution,
   and reflective boundaries.
-- <u>Simplistic Assumptions</u> of a homogeneous elastic medium oversimplify the real-world geology: doesn't account for heterogeneities, anisotropy, and layering.
-- <u>Restriction to two Dimensions</u> limits application to real-world seismic events, which occur in three dimensions.
+- Simplistic Assumptions of a homogeneous elastic medium oversimplify the real-world geology: doesn't account for heterogeneities, anisotropy, and layering.
+- Restriction to two Dimensions limits application to real-world seismic events, which occur in three dimensions.
 
  Despite these limitations, the simulation offers a valuable framework for understanding seismic wave behavior under idealized conditions. 
 
