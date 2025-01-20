@@ -124,6 +124,9 @@ This image illustrates the wave propagation and synthetic seismogram, inlcuding 
 | Station 2 | 6.032                 | 3.381                 | 6.365                   | 10.892                  |
 
 
+### Occuring Discrepancies
+The simulation revealed discrepancies between the theoretical and measured velocities, particularly for the S-waves. These discrepancies primarily arise due to the limiting factors mentioned above. Additionally, the oscillation observed in the seismogram is a result of using instantaneous displacement.
+
 
 ## 📚 References
 
