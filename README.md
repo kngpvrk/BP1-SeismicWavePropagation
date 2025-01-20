@@ -1,6 +1,6 @@
 # Simulation of Seismic Wave Propagation in 2D Elastic Media
 
-## Table of Contents
+## 📖 Table of Contents
 - [📝 Introduction and Background](#-introduction-and-background)
   - [Programming Tools](#programming-tools)
   - [Finite Element Method](#finite-element-method)
@@ -59,10 +59,10 @@ by multiplying the velocity by the time step.
 
 While this simulation successfully demonstrates the propagation of elastic seismic waves in a simplified, homogeneous domain, it has many limitations:
 
-- Numerical Artifacts such as distorted wave velocities and arrival times are introduced by numerical dispersion, coarse grid resolution,
+- Numerical artifacts such as distorted wave velocities and arrival times are introduced by numerical dispersion, coarse grid resolution,
   and reflective boundaries.
-- Simplistic Assumptions of a homogeneous elastic medium oversimplify the real-world geology: doesn't account for heterogeneities, anisotropy, and layering.
-- Restriction to two Dimensions limits application to real-world seismic events, which occur in three dimensions.
+- Simplistic assumptions of a homogeneous elastic medium oversimplify the real-world geology and therefore doesn't account for heterogeneities, anisotropy, and layering.
+- Restriction to two dimensions limits application to real-world seismic events, which occur in three dimensions.
 
  Despite these limitations, the simulation offers a valuable framework for understanding seismic wave behavior under idealized conditions. 
 
@@ -89,28 +89,40 @@ The last step is to execute the code by running the following in the Julia REPL:
 
 
 The simulation uses default parameters, which can be modified directly in the script:
-- Domain size (xmin, xmax = 0, 80e3 | ymin, ymax = -30e3, 8)
-- Grid resolution (ncx, ncy = 400, 250)
-- Bulk modulus (K = 5e10 Pa)
-- Shear modulus (G = 3e10 Pa)
-- Density (ρ = 2700 kg/m³)
-- Distance of surface stations from source (xst1, yst1 = 20e3, 0.0 | xst2, yst2 = 40e3, 0.0)
+- Domain size: 80 x 30 km (xmin, xmax = 0, 80e3 | ymin, ymax = -30e3, 8)
+- Grid resolution: ncx, ncy = 400, 250
+- Bulk modulus: K = 5e10 Pa
+- Shear modulus: G = 3e10 Pa
+- Density: ρ = 2700 kg/m³
+- Distance of surface stations from source: Station 1 = 20 km, Station 2 = 40 km (xst1, yst1 = 20e3, 0.0 | xst2, yst2 = 40e3, 0.0)
 
 
 ## 🔍 Results
 
 The simulation generates:
 - Visualiazation of Wave Propagation: A heatmap illustrates the velocity magnitdue over time across the domain. 
-  --> Images are saved every 100th time step in a PNG format
+  --> Images are saved every 100th time step in a PNG format.
 - Synthetic Seismograms: Records the displacement time series at the surface stations.
 - Theoretical velocities of the P- and S-waves.
 - Measured velocities of the P- and S-waves: Determines the measured velocities from the seismogram.
 - Arrival Times of the P- and S-waves: Extracts the arrival times from the seismogram. 
 
+The following outputs can be gained using the default parameters:
 
 <div align="center">
-  <img src="timestep_2400.png" alt="Example Wave Propagation" width="500">
+  <img src="timestep_2400.png" alt="Wave Propagation and Synthetic Seismogram at time step Δ = 2400" width="500">
 </div>
+
+This image illustrates the wave propagation and synthetic seismogram, inlcuding the surface displacement at time step Δ = 2400.
+
+
+
+|           | P-wave Velocity (km/s) | S-wave Velocity (km/s) | P-wave Arrival Time (s) | S-wave Arrival Time (s) |
+|-----------|-------------------------|-------------------------|--------------------------|--------------------------|
+| Theoretical | 5.774                 | 3.337                 | -                        | -                        |
+| Station 1 | 6.114                 | 3.365                 | 6.133                   | 10.673                  |
+| Station 2 | 6.032                 | 3.381                 | 6.365                   | 10.892                  |
+
 
 
 ## 📚 References
