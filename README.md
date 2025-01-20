@@ -1,8 +1,20 @@
 # Simulation of Seismic Wave Propagation in 2D Elastic Media
 
-<div align="center">
-  <img src="timestep_2400.png" alt="Example Wave Propagation" width="500">
-</div>
+## Table of Contents
+- [📝 Introduction and Background](#-introduction-and-background)
+  - [Programming Tools](#programming-tools)
+  - [Finite Element Method](#finite-element-method)
+  - [Boundary Conditions](#boundary-conditions)
+  - [Initialization of Wave Propagation](#initialization-of-wave-propagation)
+  - [Time Integration](#time-integration)
+  - [Synthetic Seismograms](#synthetic-seismograms)
+- [🔶 Limitations](#-limitations)
+- [🔨 Getting Started](#-getting-started)
+  - [General Requirements](#general-requirements)
+  - [Setting up the Project and Running the Code](#setting-up-the-project-and-running-the-code)
+- [🔍 Results](#-results)
+- [📚 References](#-references)
+
 
 
 ## 📝 Introduction and Background 
@@ -95,6 +107,12 @@ The simulation generates:
 - Measured velocities of the P- and S-waves: Determines the measured velocities from the seismogram.
 - Arrival Times of the P- and S-waves: Extracts the arrival times from the seismogram. 
 
+
+<div align="center">
+  <img src="timestep_2400.png" alt="Example Wave Propagation" width="500">
+</div>
+
+
 ## 📚 References
 
 - Modulhandbuch Geowissenschaften, 2021. Zugriff am 17. Januar 2025.
@@ -118,4 +136,9 @@ vances in Engineering Software, 35(10-11):663–667, 2004.
 - S. Evje and T. Fl˚atten. Cfl-violating numerical schemes for a two-fluid model. Journal of
  Scientific Computing, 29:83–114, 2006.
 - Ankit Rohatgi. Webplotdigitizer, 2023. Accessed: January 17, 2025.
+
+
+
+✤ *This was the final project for the BWp1 Geophysical Methods: Introduction to Geophysical Project Work (WiSe 24/25), supervised by Prof. Dr. T. Duretz, Goethe University Frankfurt.*
+
 
