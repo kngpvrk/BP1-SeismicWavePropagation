@@ -30,7 +30,8 @@ were used to create graphical plots of the simulation results, while the *Measur
 
 ### Core Equations
 
-The theoretical velocities of P- and S-waves are calculated using the following equation. Here, *K* is the bulk modulus, *G* the shear modulus and *ρ* the density of the medium.
+This project is based on several fundamental equations that describe seismic wave propagation in an elastic medium. Among these, the two most importants ones are the wave velocity equations and the force balance equation. Other equations, such as stress-strain relationships, Gaussian function and Courant-Friedrichs-Lewy condition , are implemented in the code but are not detailed here for brevity. For more detailed explanations, please read the works of Chapman (Seismic Wave Propagation in Elastic Media), Achenbach (Wave Propagation in Elastic Solids), and Bormann et al. (Seismic Wave Propagation and Earth Models).
+1. The theoretical velocities of P- and S-waves are calculated using the following equation. Here, *K* is the bulk modulus, *G* the shear modulus and *ρ* the density of the medium.
 
 $$
 v_p = \sqrt{\frac{K + \frac{4}{3}G}{\rho}}
@@ -39,12 +40,6 @@ $$
 $$
 v_s = \sqrt{\frac{G}{\rho}}
 $$
-
-
-$$
-\tau_{ij} = 2G \cdot \dot{\epsilon}_{ij}
-$$
-
 
 
 In a two dimensional continuum, addressing changes in the x and y directions, the force balance is given as:
@@ -56,8 +51,14 @@ $$
 \end{aligned}
 $$
 
-This equation describes the state of a medium under the influence of external forces and stresses.
 
+This equation describes the state of a medium under the influence of external forces and stresses. The terms `ρ ∂vx/∂t` and `ρ ∂vy/∂t` describe the change in velocity with time at a point in the medium in the `x`- or `y`-direction, where `ρ` is the density of the medium. 
+The gradients of the normal stresses, `∂τxx/∂x` and `∂τyy/∂y` represent the forces resulting from the extension or compression of the material in the `x`- or `y`-direction. The shear stress is represented by the terms `∂τxy/∂y` and `∂τxy/∂x` in the `x`- or `y`-direction. 
+The pressure gradients, `∂P/∂x` and `∂P/∂y` describe the effect of pressure on the medium in the `x`- or `y`-direction.
+
+
+
+Other equations, such as stress-strain relationships and boundary conditions, are implemented in the code but are not detailed here for brevity. For more detailed explanations, see the works of Chapman (2004), Achenbach (2012), and Bormann et al. (2012) listed in the [References](#references).
 
 ### Finite Element Method 
 
@@ -84,10 +85,6 @@ $$
 The *Gaussian function* was employed to represent a localized disturbance in terms of pressure (P) and stress (τ). This function simulates a disturbance with an energy 
 source that is both localized and smoothly distributed.
 
-$$
-f(x, y) = a \cdot \exp\left(-\frac{(x - x_0)^2 + (y - y_0)^2}{2\sigma^2}\right)
-$$
-
 
 ### Time Integration
 
@@ -95,21 +92,13 @@ The 'Courant-Friedrichs-Lewy (CFL)' condition is used, which is a stability crit
 appropriate ratio of the time step to the spatial resolution, it prevents the numerical solution from becoming unstable as it exceeds the relation of order 
 of system’s maximum wave speed.
 
-$$
-\Delta t \leq \frac{\Delta x}{v_p \cdot C}
-$$
-
 
 ### Synthetic Seismograms
 
 The finite-difference method was employed to update the wave equation velocities and stresses at each time step. At each iteration, values were calculated for every grid cell as time progressed. The average horizontal velocity was then extracted from the grid cell closest to the station. Instantaneous displacements were computed by multiplying the velocity by the time step and then stored in arrays, which are used to produce the synthetic seismogram.
 
-$$
-u_x = v_x \cdot \Delta t
-$$
-
-
 The seismogram displacement array is scanned to identify when the displacement exceeds a defined limit. That moment is labeled as the corresponding wave’s arrival time. Since P-waves travel faster, they exceed the limit earlier than S–waves. Therefore, the P– and S–waves must be identified separately. Ideally, the first peak in the seismogram corresponds to the P-wave, while the second peak represents the S–wave. Based on the distance from the source to each station and the arrival times of the P– and S–waves, the wave velocities at each station can be computed. 
+
 ## 🔶 Limitations 
 
 While this simulation successfully demonstrates the propagation of elastic seismic waves in a simplified, homogeneous domain, it has many limitations:
@@ -211,6 +200,6 @@ vances in Engineering Software, 35(10-11):663–667, 2004.
 
 
 
-✤ *This was the final project for the BWp1 Geophysical Methods: Introduction to Geophysical Project Work (WiSe 24/25), supervised by Prof. Dr. T. Duretz, Goethe University Frankfurt.*
+✤ *This was the final project for the BWp1 Geophysical Methods: Introduction to Geophysical Project Work (WiSe 24/25) - modul, supervised by Prof. Dr. T. Duretz, Goethe University Frankfurt.*
 
 
