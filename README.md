@@ -50,7 +50,7 @@ $$
 \end{aligned}
 $$
 
-This equation describes the state of a medium under the influence of external forces and stresses
+This equation describes the state of a medium under the influence of external forces and stresses.
 
 
 ### Finite Element Method 
@@ -127,7 +127,7 @@ Run the the following lines in Julia REPL to install the necessary packages:
 
 ### Setting up the Project and Running the Code
 
-To start setting up the project, create a new directory where you want to store the project. Then open your terimanl and execute the following command:
+To start setting up the project, create a new directory where you want to store the project. Then open your terminal and execute the following command:
 
 
 Then initialize the project by cloning the repository:
