@@ -39,7 +39,8 @@ were used to create graphical plots of the simulation results, while the *Measur
 
 ### Core Equations
 
-This project is based on several fundamental equations that describe seismic wave propagation in an elastic medium. Among these, the two most importants ones are the wave velocity equations and the force balance equation. Other equations, such as stress-strain relationships, Gaussian function and Courant-Friedrichs-Lewy condition , are implemented in the code but are not detailed here for brevity. For more detailed explanations, please read the works of Chapman (Seismic Wave Propagation in Elastic Media), Achenbach (Wave Propagation in Elastic Solids), and Bormann et al. (Seismic Wave Propagation and Earth Models).
+This project is based on several fundamental equations that describe seismic wave propagation in an elastic medium. Among these, the two most importants ones are the wave velocity equations and the force balance equation. 
+
 1. **Wave Velocities**: The theoretical velocities of P- and S-waves are calculated using the following equation. Here, `K` is the bulk modulus, `G` the shear modulus and `ρ` the density of the medium.
 
 $$
