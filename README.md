@@ -157,8 +157,8 @@ The simulation uses default parameters, which can be modified directly in the sc
 
 The simulation generates:
 - Visualiazation of Wave Propagation: A heatmap illustrates the velocity magnitdue over time across the domain. The images are saved every 100th time step in a PNG format.
-- Synthetic Seismograms: Records the displacement time series at the surface stations.
 - Theoretical velocities of the P- and S-waves.
+- Synthetic Seismograms: Records the displacement time series at the surface stations.
 - Arrival Times of the P- and S-waves: Extracts the arrival times from the seismogram.
 - Measured velocities of the P- and S-waves: Determines the measured velocities from the seismogram.
 
@@ -186,7 +186,7 @@ The simulation revealed discrepancies between the theoretical and measured veloc
 
 A visual analysis of the synthetic seismogram is recommended for validating the measured values, as it can provide a more accurate determination of wave velocities and arrival times.
 
-The obtained values and results should always be critically reviewed, evaluated, and compared with literature to ensure their validity.
+**The obtained values and results should always be critically reviewed, evaluated, and compared with literature to ensure their validity.**
 
 
 ## 📚 References
