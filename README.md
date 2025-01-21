@@ -120,7 +120,7 @@ While this simulation successfully demonstrates the propagation of elastic seism
 - **Git**: Required for cloning the repository ([Click here to Download Git](https://git-scm.com/))
 - **Code Editor**: For example Visual Studio Code ([Download VSCode](https://code.visualstudio.com/))
 
-Run the the following lines in Julia REPL to install the necessary packages:
+Run the following lines in Julia REPL to install the necessary packages:
 
 ```
 using Pkg
@@ -180,13 +180,13 @@ This image illustrates the wave propagation and synthetic seismogram, inlcuding 
 | Station 2 | 6.032                 | 5.379                | 8.289                 | 9.295                  |
 
 
-### Occuring Discrepancies
+### Occurring Discrepancies
 The simulation revealed discrepancies between the theoretical and measured velocities, particularly for the S-waves. Furthermore, there is a significant discrepancy between the measured arrival times of the S-waves and those visually determined from the seismogram. These discrepancies primarily arise due to the limiting factors mentioned above and suggest that the method for identifying the S-wave-peak may be unsuitable for this kind of setup. Furthermore, the synthetic seismogram reveals additional issues, including significant oscillations around the zero displacement and sudden anomalies at certain time steps.  This is due to the use of instantaneous displacement instead of an accumulating one, as well as the presence of the mentioned limiting factors.
 
 
 A visual analysis of the synthetic seismogram is recommended for validating the measured values, as it can provide a more accurate determination of wave velocities and arrival times.
 
-The obtained values and results should always be criticially reviewed, evaluated, and compared with literature to ensure their validity.
+The obtained values and results should always be critically reviewed, evaluated, and compared with literature to ensure their validity.
 
 
 ## 📚 References
