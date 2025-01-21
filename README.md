@@ -68,7 +68,7 @@ The pressure gradients, `∂P/∂x` and `∂P/∂y` describe the effect of press
 
 
 
-Other equations, such as the stress-strain relationships, total stress tensor, strain, shear deformation, Gaussian function, time displacement, and others, are implemented in the code but are not detailed here for brevity. For more detailed explanations, see the works of Chapman (2004), Achenbach (2012), and Bormann et al. (2012) listed in the [References](#references).
+Other equations, such as the stress-strain relationships, total stress tensor, strain, shear deformation, Gaussian function, time displacement, and others, are implemented in the code but are not detailed here for brevity. For more detailed explanations, see the works of Chapman (2004), Achenbach (2012), and Bormann et al. (2012) listed in the [References](#-references).
 
 ### Finite Element Method 
 
