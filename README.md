@@ -116,9 +116,9 @@ While this simulation successfully demonstrates the propagation of elastic seism
  To run the code, ensure following tools are installed:
 
 - **Julia**: Version 1.11 or higher ([Click here to Download Julia](https://julialang.org/downloads/))
-- **Code Editor**: Visual Studio Code (recommended) ([Click here to Download VSCode](https://code.visualstudio.com/))
+- **Code Editor**: Visual Studio Code ([Click here to Download VSCode](https://code.visualstudio.com/))
 - **Git**: Required for cloning the repository ([Click here to Download Git](https://git-scm.com/))
-- **Code Editor**: For example Visual Studio Code ([Click here to Download VSCode](https://code.visualstudio.com/))
+
 
 Run the following lines in the Julia REPL to install the necessary packages:
 
