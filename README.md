@@ -23,6 +23,15 @@ This code simulates two-dimensional seismic wave propagation in an elastic homog
 Furthermore, it computes displacement time series at the surface and constructs synthetic seismograms for stations located at varying distances from the source. 
 Additionally, it identifies the peaks of P- and S-wave arrivals and calculates their velocities based on the seismograms, comparing them with theoretical values.
 
+
+This code was developed in the context of "BWp1 Geophysical Methods: Introduction to Geophysical Project Work", a bachelor module in geoscience at the Goethe University Frankfurt, Germany.
+
+
+
+
+
+
+
 ### Progamming Tools 
 
 The programming language *Julia* and the *Visual Studio Code editor* were utilized for this purpose. For the visualization, the Julia package *Plots* and *Pyplot*
