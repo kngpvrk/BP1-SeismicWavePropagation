@@ -181,7 +181,7 @@ This image illustrates the wave propagation and synthetic seismogram, inlcuding 
 
 
 ### Occuring Discrepancies
-The simulation revealed discrepancies between the theoretical and measured velocities, particularly for the S-waves. Furthermore, there is a significant discrepancy between the measured arrival times of the S-waves and those visually determined from the seismogram. These discrepancies primarily arise due to the limiting factors mentioned above and suggest that the method for identifying the S-wave-peak may be unsuitable for this kind of setup. Additionally, the oscillation observed in the seismogram is a result of using instantaneous displacement.
+The simulation revealed discrepancies between the theoretical and measured velocities, particularly for the S-waves. Furthermore, there is a significant discrepancy between the measured arrival times of the S-waves and those visually determined from the seismogram. These discrepancies primarily arise due to the limiting factors mentioned above and suggest that the method for identifying the S-wave-peak may be unsuitable for this kind of setup. Additionally, the oscillation observed in the seismogram is a result of using instantaneous displacement instead of an accumulating one.
 
 To validate the measured values, a visual analysis of the synthetic seismogram is recommended, as it can provide a more accurate representation of wave velocities and arrival times.
 
