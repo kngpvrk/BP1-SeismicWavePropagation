@@ -21,7 +21,7 @@
 
 This code simulates two-dimensional seismic wave propagation in an elastic homogeneous medium by employing numerical modeling to analyze wave behavior in a geophysical setting. 
 Furthermore, it computes displacement time series at the surface and constructs synthetic seismograms for stations located at varying distances from the source. 
-Additionally, it identifies the peaks of P- and S-wave arrivals and calculates their velocities based on the seismograms, comparing them with theoretical values.
+It also identifies the peaks of P- and S-wave arrival times and calculates their velocities based on the seismograms, comparing them with theoretical values.
 
 
 This code was developed in the context of "BWp1 Geophysical Methods: Introduction to Geophysical Project Work", a bachelor module in geoscience at the Goethe University Frankfurt, Germany.
