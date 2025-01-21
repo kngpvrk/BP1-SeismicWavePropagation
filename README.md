@@ -32,16 +32,16 @@ This code was developed in the context of "BWp1 Geophysical Methods: Introductio
 
 
 
-### Progamming Tools 
+### Programming Tools 
 
 The programming language *Julia* and the *Visual Studio Code editor* were utilized for this purpose. For the visualization, the Julia package *Plots* and *Pyplot*
 were used to create graphical plots of the simulation results, while the *Measure* package allowed the customization of the plot layouts.
 
 ### Core Equations
 
-This project is based on several fundamental equations that describe seismic wave propagation in an elastic medium. Among these, the two most importants ones are the wave velocity equations and the force balance equation. 
+This project is based on several fundamental equations that describe seismic wave propagation in an elastic medium. Among these, the two most important ones are the wave velocity equations and the force balance equation. 
 
-1. **Wave Velocities**: The theoretical velocities of P- and S-waves are calculated using the following equation. Here, `K` is the bulk modulus, `G` the shear modulus and `ρ` the density of the medium.
+1. **Wave Velocities**: The theoretical velocities of P- and S-waves are calculated using the following equations. Here, `K` is the bulk modulus, `G` the shear modulus and `ρ` the density of the medium.
 
 $$
 v_p = \sqrt{\frac{K + \frac{4}{3}G}{\rho}}
@@ -52,7 +52,7 @@ v_s = \sqrt{\frac{G}{\rho}}
 $$
 
 
-2. **Force Balance**: In a two dimensional continuum, addressing changes in the x and y directions, the force balance is given as:
+2. **Force Balance**: In a two-dimensional continuum, addressing changes in the x and y directions, the force balance is given as:
 
 $$
 \begin{aligned}
@@ -68,17 +68,17 @@ The pressure gradients, `∂P/∂x` and `∂P/∂y` describe the effect of press
 
 
 
-Other equations, such as the stress-strain relationships, total stress tensor, strain, shear deformation, Gaussian function, time displacement and others, are implemented in the code but are not detailed here for brevity. For more detailed explanations, see the works of Chapman (2004), Achenbach (2012), and Bormann et al. (2012) listed in the [References](#references).
+Other equations, such as the stress-strain relationships, total stress tensor, strain, shear deformation, Gaussian function, time displacement, and others, are implemented in the code but are not detailed here for brevity. For more detailed explanations, see the works of Chapman (2004), Achenbach (2012), and Bormann et al. (2012) listed in the [References](#references).
 
 ### Finite Element Method 
 
 The *finite element method* (FEM) was utilized for the modeling of seismic wave propagation, which allowed the division of the system into discrete
-parts, allowing continuous physical equations to be solved numerically.  
+parts, enabling continuous physical equations to be solved numerically.  
 
 ### Boundary Conditions
 
 In this project, the *Neuman Boundary Conditions* were applied to define the behavior at the edges of the local domain. These conditions ensure 
-zero particle velocity across the edges and as a result confine the wavefield within the domain. 
+zero particle velocity across the edges, and as a result, confine the wavefield within the domain. 
 
 
 ### Initialization of Wave Propagation
