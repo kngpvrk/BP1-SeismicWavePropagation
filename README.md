@@ -72,22 +72,13 @@ Other equations, such as stress-strain relationships, Gaussian functions and oth
 
 ### Finite Element Method 
 
-The *finite element method* (FEM) was uitilized for the modeling of seismic wave propagation, which allowed the division of the system into discrete
+The *finite element method* (FEM) was utilized for the modeling of seismic wave propagation, which allowed the division of the system into discrete
 parts, allowing continuous physical equations to be solved numerically.  
 
 ### Boundary Conditions
 
 In this project, the *Neuman Boundary Conditions* were applied to define the behavior at the edges of the local domain. These conditions ensure 
-zero particle velocity across the edges and as a result confine the wavefield within the domain. The Neumann boundary conditions were applied as follows:
-
-
-$$
-\frac{\partial v_x}{\partial y} = 0
-$$
-
-$$
-\frac{\partial v_y}{\partial x} = 0
-$$
+zero particle velocity across the edges and as a result confine the wavefield within the domain. 
 
 
 ### Initialization of Wave Propagation
@@ -139,14 +130,14 @@ Pkg.add(["Plots", "PyPlot", "Measures"])
 
 ### Setting up the Project and Running the Code
 
-To start setting up the project, create a new directory where you want to store the project and initialize the project by cloning the repository. Then open your terminal and execute the following command:
+To start setting up the project, create a new directory where you want to store the project and initialize the project by cloning this repository. Then open your terminal and execute the following command:
 
 ```
 git clone https://github.com/kngpvrk/BP1-SeismicWavePropagation.git
 BP1-SeismicWavePropagation
 ```
 
-The last step is to execute the code by running the following in the Julia REPL: 
+The last step is to execute the code by running the following line in the Julia REPL: 
 
 ```
 include("BWp1_Trapp_code.jl")
@@ -184,9 +175,9 @@ This image illustrates the wave propagation and synthetic seismogram, inlcuding 
 
 |           | P-wave Velocity (km/s) | S-wave Velocity (km/s) | P-wave Arrival Time (s) | S-wave Arrival Time (s) |
 |-----------|-------------------------|-------------------------|--------------------------|--------------------------|
-| Theoretical | 5.774                 | 3.337                 | -                        | -                        |
-| Station 1 | 6.114                 | 3.365                 | 6.133                   | 10.673                  |
-| Station 2 | 6.032                 | 3.381                 | 6.365                   | 10.892                  |
+| Theoretical | 5.774                 | 3.333                 | -                        | -                        |
+| Station 1 | 6.114                 | 5.223                | 5.897                 | 6.903                 |
+| Station 2 | 6.032                 | 5.379                | 8.289                 | 9.295                  |
 
 
 ### Occuring Discrepancies
