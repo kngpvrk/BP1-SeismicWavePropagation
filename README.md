@@ -62,7 +62,7 @@ $$
 $$
 
 
-This equation describes the state of a medium under the influence of external forces and stresses. The terms `ρ ∂vx/∂t` and `ρ ∂vy/∂t` describe the change in velocity with time at a point in the medium in the `x`- or `y`-direction, where `ρ` is the density of the medium. 
+This equation describes the state of a medium under the influence of external forces and stresses. The terms `ρ ∂vx/∂t` and `ρ ∂vy/∂t` describe the change in velocity with time at a point in the medium in the `x`- or `y`-direction.
 The gradients of the normal stresses, `∂τxx/∂x` and `∂τyy/∂y` represent the forces resulting from the extension or compression of the material in the `x`- or `y`-direction. The shear stress is represented by the terms `∂τxy/∂y` and `∂τxy/∂x` in the `x`- or `y`-direction. 
 The pressure gradients, `∂P/∂x` and `∂P/∂y` describe the effect of pressure on the medium in the `x`- or `y`-direction.
 
@@ -84,7 +84,7 @@ zero particle velocity across the edges, and as a result, confine the wavefield 
 ### Initialization of Wave Propagation
 
 The *Gaussian function* was employed to represent a localized disturbance in terms of pressure (P) and stress (τ). This function simulates a disturbance with an energy 
-source that is both localized and smoothly distributed.
+source that is both localized and smoothly distributed at the source.
 
 
 ### Time Integration
@@ -120,7 +120,7 @@ While this simulation successfully demonstrates the propagation of elastic seism
 - **Git**: Required for cloning the repository ([Click here to Download Git](https://git-scm.com/))
 - **Code Editor**: For example Visual Studio Code ([Download VSCode](https://code.visualstudio.com/))
 
-Run the following lines in Julia REPL to install the necessary packages:
+Run the following lines in the Julia REPL to install the necessary packages:
 
 ```
 using Pkg
@@ -130,14 +130,14 @@ Pkg.add(["Plots", "PyPlot", "Measures"])
 
 ### Setting up the Project and Running the Code
 
-To start setting up the project, create a new directory where you want to store the project and initialize the project by cloning this repository. Then open your terminal and execute the following command:
+To start setting up the project, create a new file as well as a new directory in your prefered coding environment where you want to store the project. Subsequently, initialize the project by cloning this repository. Then open your terminal and execute the following command:
 
 ```
 git clone https://github.com/kngpvrk/BP1-SeismicWavePropagation.git
 BP1-SeismicWavePropagation
 ```
 
-The last step is to execute the code by running the following line in the Julia REPL: 
+The final step is to execute the code by running the following line in Julia REPL: 
 
 ```
 include("BWp1_Trapp_code.jl")
