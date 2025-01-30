@@ -196,8 +196,7 @@ A visual analysis of the synthetic seismogram is recommended for validating the 
  Cambridge, 1 edition, 2004. Online publication date: January 2010.
 - J. Achenbach. Wave propagation in elastic solids. Elsevier, 2012.
 - P. Bormann, B. Engdahl, and R. Kind. Seismic wave propagation and earth models. In New
- manual of seismological observatory practice 2, pages 1–105. Deutsches GeoForschungsZen
-trum GFZ, 2012.
+ manual of seismological observatory practice 2, pages 1–105. Deutsches GeoForschungsZentrum GFZ, 2012.
 - J. Bezanson, A. Edelman, S. Karpinski, and V. Shah. The julia programming language, 2012. Version 1.11, accessed January 10, 2025.
 - Microsoft Corporation. Visual studio code, 2015. Version 1.96, accessed January 10, 2025.
 - J. Semblat and J. Brioist. Efficiency of higher order finite elements for the analysis of seismic
@@ -209,7 +208,7 @@ debbarh. A new ghost-node method for linking different models and initial invest
  of heterogeneity and nonmatching grids. Advances in Water Resources, 30(8):1722–1736, 2007.
 - A. Baratta and I. Corbi. Epicentral distribution of seismic sources over the territory. Ad
 vances in Engineering Software, 35(10-11):663–667, 2004.
-- S. Evje and T. Fl˚atten. Cfl-violating numerical schemes for a two-fluid model. Journal of
+- S. Evje and T. Flatten. Cfl-violating numerical schemes for a two-fluid model. Journal of
  Scientific Computing, 29:83–114, 2006.
 - Ankit Rohatgi. Webplotdigitizer, 2023. Accessed: January 17, 2025.
 
